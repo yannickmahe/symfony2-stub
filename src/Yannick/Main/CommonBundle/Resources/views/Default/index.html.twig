@@ -1,1 +1,12 @@
-Hello {{ name }}!
+{% extends '::base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block stylesheets %}{% endblock %}
+
+{% block body %}It works!{% endblock %}
+
+{% block javascripts %}
+
+	{{ parent() }}
+{% endblock %}
