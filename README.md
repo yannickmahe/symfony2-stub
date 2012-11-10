@@ -28,17 +28,27 @@ How to install
 
 	composer.phar install
 
+* setup assets for dev
+
+	php app/console assets:install --symlink
+
+* clear cache
+
+	php app/console cache:clear
+	php app/console cache:clear --env=prod
+
 * setup host file
 
-	127.0.0.1 	symfony2-stub.local
+	127.0.0.1 	domain.tld
 
 * setup apache
 
+	````
 	<VirtualHost *:80>
-	    ServerName symfony2-stub.local
+	    ServerName domain.tld
 
-	    DocumentRoot /var/www/symfony2-stub/web
-	    <Directory /var/www/symfony-stub2/web/>
+	    DocumentRoot {{dir}}
+	    <Directory {{dir}}>
 	        Options Indexes FollowSymLinks MultiViews
 	        AllowOverride None
 	        Order allow,deny
@@ -50,9 +60,11 @@ How to install
 	        </IfModule>
 	    </Directory>
 	</VirtualHost>
+	````
 
 * restart apache
 
 	sudo service apache2 restart
 
 * Rename the Yannick bundle
+
