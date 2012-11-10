@@ -1,0 +1,6 @@
+[submodule "src/Yannick/Main/CommonBundle/Resources/public/bootstrap"]
+	path = src/Yannick/Main/CommonBundle/Resources/public/bootstrap
+	url = git://github.com/twitter/bootstrap.git
+[submodule "src/Yannick/Main/CommonBundle/Resources/public/font-awesome"]
+	path = src/Yannick/Main/CommonBundle/Resources/public/font-awesome
+	url = git://github.com/FortAwesome/Font-Awesome.git
