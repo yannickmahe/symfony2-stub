@@ -8,8 +8,8 @@ Included
 
 * Symfony2
 * Symfony2 vendors (doctrine, twig, assetic...)
-* Boostrap (via git submodule)
-* Font Awesome (extra boostrap icons, via submodule)
+* Bootstrap (via git submodule)
+* Font Awesome (extra bootstrap icons, via submodule)
 * Less.js (asset in common bundle)
 * JQuery (via google CDN)
 
@@ -17,7 +17,13 @@ How to install
 --------------
 
 * git clone
+
+   git clone --recursive git@github.com:yannickmahe/symfony2-stub.git
+
 * copy parameters.yml.dist to parameters.yml
+
+    cp app/config/parameters.yml.dist app/config/parameters.yml
+
 * init vendors
 
 	composer.phar install
@@ -27,7 +33,6 @@ How to install
 	127.0.0.1 	symfony2-stub.local
 
 * setup apache
-* restart apache
 
 	<VirtualHost *:80>
 	    ServerName symfony2-stub.local
@@ -45,5 +50,9 @@ How to install
 	        </IfModule>
 	    </Directory>
 	</VirtualHost>
+
+* restart apache
+
+	sudo service apache2 restart
 
 * Rename the Yannick bundle
